@@ -4,11 +4,20 @@ public class LinkedList {
 	private Node head;
 	private int size;
 	
+	/**
+	 * Konstruktor bez parametara
+	 */
+	
 	public LinkedList()
 	{
 		this.head = null;
 		this.size = 0;
 	}
+	
+	/**
+	 * Metoda koja dodaje element listi
+	 * @param value
+	 */
 	
 	public void add(int value)
 	{
@@ -30,6 +39,10 @@ public class LinkedList {
 		}
 	}
 	
+	/**
+	 * Metoda koja vraæa string sa svim elementima liste
+	 */
+	
 	public String toString()
 	{
 		String str = "";
@@ -41,6 +54,12 @@ public class LinkedList {
 		}
 		return str;
 	}
+	
+	/**
+	 * Metoda koja ispisuje jedan element edreðen indeksom
+	 * @param index
+	 * @return value
+	 */
 	
 	public int get(int index)
 	{
@@ -63,6 +82,11 @@ public class LinkedList {
 		}
 		return current.value;
 	}
+	
+	/**
+	 * Metoda koja uklanja iz liste jedan element odreðen indeksom
+	 * @param index
+	 */
 	
 	public void removeAt(int index)
 	{
@@ -91,6 +115,11 @@ public class LinkedList {
 			
 	}
 	
+	/**
+	 * Metoda koja vraæa niz sa svim elementima liste
+	 * @return array
+	 */
+	
 	public int[] toArray()
 	{
 		Node current = head;
@@ -105,21 +134,43 @@ public class LinkedList {
 		return array;
 	}
 	
+	/**
+	 * Metoda koja vraæa dužinu liste
+	 * @return
+	 */
 	
 	public int getSize()
 	{
 		return size;
 	}
+	
+	/**
+	 * Node klasa
+	 * @author Gogo
+	 *
+	 */
+	
 	public class Node{
 		
 		public int value;
 		public Node next;
+		
+		/**
+		 * Konstruktor sa jednim parametrom
+		 * @param value
+		 */
 		
 		public Node(int value)
 		{
 			this.value = value;
 			this.next = null;
 		}
+		
+		/**
+		 * Konstruktor sa dva parametra
+		 * @param value
+		 * @param next
+		 */
 		
 		public Node(int value, Node next)
 		{
